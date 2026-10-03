@@ -169,14 +169,32 @@ footer {
 }
 
 @media (max-width: 700px) {
+
     header {
         flex-direction: column;
         gap: 15px;
+        padding: 18px 5%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
     }
 
     nav a {
-        margin: 0 7px;
+        margin: 0 5px;
         font-size: 14px;
+    }
+
+    #home {
+        min-height: 75vh;
+        padding: 40px 6%;
     }
 
     #home h2 {
@@ -190,11 +208,28 @@ footer {
     section {
         padding: 50px 6%;
     }
-.menu-grid {
-    grid-template-columns: 1fr;
 
-.features {
-    grid-template-columns: 1fr;
+    section h2 {
+        font-size: 30px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card img {
+        height: 200px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons a {
+        display: block;
+        max-width: 250px;
+        margin: 10px auto;
+    }
 }
 }
 .order-btn {
