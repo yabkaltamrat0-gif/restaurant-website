@@ -190,6 +190,9 @@ footer {
     }
 .menu-grid {
     grid-template-columns: 1fr;
+
+.features {
+    grid-template-columns: 1fr;
 }
 }
 .order-btn {
@@ -234,4 +237,33 @@ nav a {
 
 nav a:hover {
     color: #f4b942;
+}
+.features {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    background: #f8f5f0;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    color: #3b1f0f;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
 }
