@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8f5f0;
+    color: #222;
+}
+
+header {
+    background: #3b1f0f;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f4b942;
+}
+
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 8%;
+    background: #6b3518;
+    color: white;
+}
+
+#home h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+#home a {
+    background: #f4b942;
+    color: #222;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#home a:hover {
+    background: white;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #3b1f0f;
+}
+
+#menu {
+    background: white;
+}
+
+#menu h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#menu ul {
+    max-width: 600px;
+    margin: auto;
+    list-style: none;
+}
+
+#menu li {
+    background: #f8f5f0;
+    margin: 12px 0;
+    padding: 18px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+#about {
+    text-align: center;
+}
+
+#about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+#contact {
+    background: white;
+    text-align: center;
+}
+
+#contact p {
+    margin: 10px 0;
+}
+
+footer {
+    background: #3b1f0f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    #home h2 {
+        font-size: 36px;
+    }
+
+    #home p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+}
