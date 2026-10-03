@@ -93,25 +93,50 @@ section h2 {
     background: white;
 }
 
-#menu h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-#menu ul {
-    max-width: 600px;
+.menu-grid {
+    max-width: 1100px;
     margin: auto;
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
-#menu li {
+.menu-card {
     background: #f8f5f0;
-    margin: 12px 0;
-    padding: 18px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    font-size: 24px;
+    margin: 18px 10px 8px;
+    color: #3b1f0f;
+}
+
+.menu-card p {
+    padding: 0 20px;
+    margin-bottom: 12px;
+}
+
+.menu-card span {
+    display: inline-block;
+    background: #f4b942;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+    border-radius: 6px;
     font-weight: bold;
 }
 
