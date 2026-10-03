@@ -188,6 +188,9 @@ footer {
     section {
         padding: 50px 6%;
     }
+.menu-grid {
+    grid-template-columns: 1fr;
+}
 }
 .order-btn {
     display: inline-block;
