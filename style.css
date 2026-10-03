@@ -50,8 +50,8 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 40px 8%;
-    background: #6b3518;
-    color: white;
+    background-color: #6b3518 !important;
+    color: white !important;
 }
 
 #home h2 {
