@@ -50,11 +50,8 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 40px 8%;
-
-    background-image: url("https://images.unsplash.com/photo-1547592180-85f173990554");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    background: #6b3518;
+    color: white;
 }
 
 #home h2 {
