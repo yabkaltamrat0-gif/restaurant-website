@@ -764,3 +764,10 @@ footer .logo {
     gap: 6px;
   }
 }
+
+@media (max-width: 700px) {
+    .header-cta,
+    .navbar .btn {
+        display: none !important;
+    }
+}
