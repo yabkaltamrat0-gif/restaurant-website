@@ -3,23 +3,553 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover authentic Ethiopian flavors at Habesha Taste.">
-  <title>Habesha Taste | Authentic Ethiopian Cuisine</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover Ethiopian cuisine at Habesha Taste in Addis Ababa.">
+  <meta name="theme-color" content="#3b1f0f">
+  <title>Habesha Taste | Ethiopian Cuisine</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
 
+  <style>
+    :root {
+      --cream: #f8f5f0;
+      --brown: #3b1f0f;
+      --gold: #f4b942;
+      --text: #49382d;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px 6%;
+      background: var(--cream);
+    }
+
+    .logo {
+      color: var(--brown);
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+
+    .logo span,
+    h1 span,
+    h2 span {
+      color: #b77b17;
+    }
+
+    .logo small {
+      display: block;
+      margin-top: 5px;
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    .text-btn:hover {
+      color: #a96d10;
+    }
+
+    .header-btn,
+    .primary-btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 1px solid var(--brown);
+      border-radius: 3px;
+      background: var(--brown);
+      color: var(--white);
+      font-weight: 700;
+      text-align: center;
+      transition: background .2s ease;
+    }
+
+    .header-btn:hover,
+    .primary-btn:hover {
+      background: #633719;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 48px;
+      padding: 65px 7%;
+      background: #f0e8db;
+    }
+
+    .eyebrow {
+      color: #9c6817;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      margin: 15px 0;
+      color: var(--brown);
+      font-family: "Playfair Display", serif;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(42px, 5.5vw, 68px);
+    }
+
+    h2 {
+      font-size: clamp(34px, 4vw, 48px);
+    }
+
+    .hero-text {
+      max-width: 520px;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 22px;
+      margin: 28px 0;
+    }
+
+    .text-btn {
+      font-weight: 700;
+    }
+
+    .hero-note {
+      font-size: 13px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 110px 110px 5px 5px;
+    }
+
+    .image-label {
+      margin-top: 14px;
+      padding: 16px;
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+    }
+
+    .image-label span,
+    .image-label strong {
+      display: block;
+    }
+
+    .image-label span {
+      color: #9c6817;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+
+    .image-label strong {
+      margin-top: 4px;
+      color: var(--brown);
+    }
+
+    .welcome-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 22px 16px;
+      background: var(--brown);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .welcome-strip b {
+      color: var(--gold);
+    }
+
+    .menu-section,
+    .story-section {
+      padding: 75px 7%;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .section-heading > p {
+      max-width: 430px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .menu-card {
+      min-width: 0;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 6px 24px rgba(59, 31, 15, .07);
+    }
+
+    .menu-card > img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #e7dfd3;
+    }
+
+    .menu-info {
+      padding: 22px;
+    }
+
+    .dish-title {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .dish-title h3 {
+      margin: 0;
+      color: var(--brown);
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+    }
+
+    .dish-title strong {
+      flex-shrink: 0;
+      color: #98600b;
+      font-size: 15px;
+    }
+
+    .menu-info p {
+      font-size: 14px;
+    }
+
+    .menu-info > a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 0;
+      color: #8b580b;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .story-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      background: #efe5d7;
+    }
+
+    .story-image img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .story-content > p:not(.eyebrow) {
+      font-size: 15px;
+    }
+
+    .story-content .primary-btn {
+      margin-top: 14px;
+    }
+
+    .contact-section {
+      padding: 70px 7%;
+      background: var(--brown);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      color: var(--white);
+    }
+
+    .contact-section > p:not(.eyebrow) {
+      font-size: 16px;
+    }
+
+    .contact-section .eyebrow {
+      color: var(--gold);
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 950px;
+      margin: 32px auto;
+      text-align: left;
+    }
+
+    .contact-item {
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.23);
+      border-radius: 6px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 15px;
+    }
+
+    .contact-item p {
+      margin: 0;
+    }
+
+    .contact-item a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin: 30px auto;
+    }
+
+    .contact-actions .primary-btn {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--brown);
+    }
+
+    .contact-actions .primary-btn:hover {
+      background: #ffd271;
+    }
+
+    .map-container {
+      max-width: 950px;
+      margin: 35px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+
+    .map-container h3 {
+      color: var(--gold);
+    }
+
+    .map-link {
+      display: inline-block;
+      padding: 12px 16px;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 3px;
+      text-decoration: underline;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 30px 7%;
+      background: #271408;
+      color: var(--white);
+      font-size: 13px;
+    }
+
+    footer .logo {
+      color: var(--white);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        flex-direction: column;
+        padding: 22px 18px;
+        gap: 18px;
+      }
+
+      nav {
+        width: 100%;
+        gap: 12px 18px;
+      }
+
+      nav a {
+        font-size: 15px;
+      }
+
+      .header-btn {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 42px 20px;
+        gap: 30px;
+      }
+
+      h1 {
+        font-size: clamp(40px, 10vw, 52px);
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .hero-image img {
+        aspect-ratio: 4 / 3;
+        border-radius: 75px 75px 5px 5px;
+      }
+
+      .welcome-strip {
+        gap: 10px;
+        font-size: 10px;
+      }
+
+      .menu-section,
+      .story-section {
+        padding: 48px 18px;
+      }
+
+      .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .menu-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+
+      .menu-card > img {
+        aspect-ratio: 4 / 3;
+      }
+
+      .menu-info {
+        padding: 20px;
+      }
+
+      .dish-title h3 {
+        font-size: 21px;
+      }
+
+      .menu-info p {
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .story-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .contact-section {
+        padding: 50px 20px;
+      }
+
+      .contact-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .contact-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .contact-actions .primary-btn {
+        width: 100%;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 18px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .dish-title {
+        flex-wrap: wrap;
+      }
+
+      .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
   <header class="site-header">
     <a class="logo" href="#home">
       HABESHA <span>TASTE</span>
       <small>AUTHENTIC ETHIOPIAN CUISINE</small>
     </a>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#menu">Our Menu</a>
       <a href="#story">Our Story</a>
@@ -38,35 +568,34 @@
           Discover the rich flavors, vibrant spices, and beautiful
           traditions of Ethiopian cuisine at Habesha Taste.
         </p>
+
         <div class="hero-actions">
           <a class="primary-btn" href="#menu">Discover Our Menu ↗</a>
           <a class="text-btn" href="#story">Our Story</a>
         </div>
-        <div class="hero-note">
-          <span>✦</span> Fresh ingredients. Authentic flavors. Ethiopian hospitality.
-        </div>
+
+        <p class="hero-note">
+          ✦ Fresh ingredients. Authentic flavors. Ethiopian hospitality.
+        </p>
       </div>
 
       <div class="hero-image">
         <img
-          src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85"
-          alt="Beautifully presented food"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian%20food.jpg"
+          alt="Ethiopian food served traditionally"
+          fetchpriority="high"
         >
         <div class="image-label">
           <span>OUR SIGNATURE EXPERIENCE</span>
           <strong>Made with love, served with pride.</strong>
         </div>
-        <div class="round-stamp">ETHIOPIAN<br>HOSPITALITY<br>✦ EST. 2026 ✦</div>
       </div>
     </section>
 
     <section class="welcome-strip">
-      <span>AUTHENTIC FLAVORS</span>
-      <b>✦</b>
-      <span>TIMELESS TRADITIONS</span>
-      <b>✦</b>
-      <span>MADE WITH LOVE</span>
-      <b>✦</b>
+      <span>AUTHENTIC FLAVORS</span><b>✦</b>
+      <span>TIMELESS TRADITIONS</span><b>✦</b>
+      <span>MADE WITH LOVE</span><b>✦</b>
       <span>ETHIOPIAN HOSPITALITY</span>
     </section>
 
@@ -76,8 +605,10 @@
           <p class="eyebrow">FROM OUR KITCHEN</p>
           <h2>Favorites from<br>Our <span>Table.</span></h2>
         </div>
-        <p>Explore dishes inspired by the heart and soul of Ethiopia,
-        prepared with care and served with pride.</p>
+        <p>
+          Explore dishes inspired by the heart and soul of Ethiopia,
+          prepared with care and served with pride.
+        </p>
       </div>
 
       <div class="menu-grid">
@@ -89,8 +620,7 @@
           >
           <div class="menu-info">
             <div class="dish-title">
-              <h3>Special Kitfo</h3>
-              <strong>450 ETB</strong>
+              <h3>Special Kitfo</h3><strong>450 ETB</strong>
             </div>
             <p>Traditional Ethiopian kitfo, served with authentic accompaniments.</p>
             <a href="#contact">Ask About This Dish ↗</a>
@@ -105,8 +635,7 @@
           >
           <div class="menu-info">
             <div class="dish-title">
-              <h3>Doro Wot</h3>
-              <strong>350 ETB</strong>
+              <h3>Doro Wot</h3><strong>350 ETB</strong>
             </div>
             <p>A rich, slow-cooked chicken stew with berbere spices.</p>
             <a href="#contact">Ask About This Dish ↗</a>
@@ -121,8 +650,7 @@
           >
           <div class="menu-info">
             <div class="dish-title">
-              <h3>Beyaynetu</h3>
-              <strong>280 ETB</strong>
+              <h3>Beyaynetu</h3><strong>280 ETB</strong>
             </div>
             <p>A colorful selection of Ethiopian dishes served on injera.</p>
             <a href="#contact">Ask About This Dish ↗</a>
@@ -137,8 +665,7 @@
           >
           <div class="menu-info">
             <div class="dish-title">
-              <h3>Special Tibs</h3>
-              <strong>400 ETB</strong>
+              <h3>Special Tibs</h3><strong>400 ETB</strong>
             </div>
             <p>Tender Ethiopian-style sautéed meat with onions and peppers.</p>
             <a href="#contact">Ask About This Dish ↗</a>
@@ -150,11 +677,12 @@
     <section class="story-section" id="story">
       <div class="story-image">
         <img
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
-          alt="Warm restaurant dining atmosphere"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian%20traditional%20coffee%20ceremony.jpg"
+          alt="Ethiopian coffee ceremony and hospitality"
           loading="lazy"
         >
       </div>
+
       <div class="story-content">
         <p class="eyebrow">MORE THAN JUST A MEAL</p>
         <h2>Our Culture.<br>Our Food. <span>Our Home.</span></h2>
@@ -175,8 +703,50 @@
       <p class="eyebrow">YOUR TABLE IS WAITING</p>
       <h2>Let's Share Something <span>Delicious.</span></h2>
       <p>Have a question about our menu or want to visit us?</p>
-      <a class="primary-btn" href="mailto:info@habeshataste.com">Contact Our Restaurant ↗</a>
-      <small>Demo email: replace with the restaurant's real contact details.</small>
+
+      <div class="contact-details">
+        <div class="contact-item">
+          <h3>Phone</h3>
+          <p><a href="tel:+251910435225">+251 910 435 225</a></p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Address</h3>
+          <p>Addis Ababa, Ethiopia</p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Opening Hours</h3>
+          <p>8:00–12:00</p>
+        </div>
+      </div>
+
+      <div class="contact-actions">
+        <a
+          class="primary-btn"
+          href="https://wa.me/251910435225?text=Hello%20Habesha%20Taste%2C%20I%20would%20like%20to%20ask%20about%20your%20menu."
+          target="_blank"
+          rel="noopener noreferrer"
+        >Contact on WhatsApp</a>
+
+        <a
+          class="primary-btn"
+          href="https://t.me/+251910435225"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Contact on Telegram</a>
+      </div>
+
+      <div class="map-container">
+        <h3>Find Us</h3>
+        <p>Search for Addis Ababa on Google Maps.</p>
+        <a
+          class="map-link"
+          href="https://www.google.com/maps/search/?api=1&query=Addis+Ababa+Ethiopia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Open Google Maps ↗</a>
+      </div>
     </section>
   </main>
 
@@ -185,6 +755,5 @@
     <p>Authentic Ethiopian cuisine. Made with love.</p>
     <p>© 2026 Habesha Taste. Demo website.</p>
   </footer>
-
 </body>
 </html>
